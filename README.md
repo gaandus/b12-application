@@ -1,31 +1,43 @@
 # B12 Application Submission
 
-This repository submits a signed application payload to B12 via GitHub Actions.
+This repository contains a small automation project used to submit my application to B12 via GitHub Actions.
+
+The workflow builds a canonical JSON payload, signs it using HMAC-SHA256, and POSTs it to B12’s application endpoint.  
+On success, the CI run prints a receipt token used to confirm submission.
+
+---
 
 ## Applicant
 
-- Portfolio: https://dtanderson.net/
-- LinkedIn: https://www.linkedin.com/in/daniel-anderson-52109721/
-- GitHub: https://github.com/gaandus
-- Resume (PDF): ./resume/Danny_Anderson_Resume.pdf
+Danny Anderson  
+- Portfolio: https://dtanderson.net/  
+- LinkedIn: https://www.linkedin.com/in/daniel-anderson-52109721/  
+- GitHub: https://github.com/gaandus  
+
+**Resume (PDF):**  
+`./resume/Danny_Anderson_Resume.pdf`
+
+---
 
 ## How it works
 
-A GitHub Action runs a Python script that:
+1. A GitHub Action runs a Python script that:
+   - Builds a sorted, compact JSON payload
+   - Signs it with HMAC-SHA256
+   - Sends it to `https://b12.io/apply/submission`
 
-- Builds a canonical JSON payload
-- Signs it using HMAC-SHA256
-- POSTs it to B12’s application endpoint
-- Prints the receipt token for confirmation
+2. The action prints a receipt token returned by B12.
 
-## Running
+---
 
-1. Add GitHub Actions secrets:
-   - B12_NAME
-   - B12_EMAIL
-   - B12_RESUME_LINK
+## Running the workflow
 
-2. Run the workflow:
-   Actions → "B12 Application Submission" → Run workflow
+1. Configure GitHub Actions secrets:
+   - `B12_NAME`
+   - `B12_EMAIL`
+   - `B12_RESUME_LINK`
 
-3. Copy the printed receipt from logs into the application form.
+2. Run:
+   Actions → **B12 Application Submission** → Run workflow
+
+3. Copy the printed receipt into the application form.
