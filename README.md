@@ -14,7 +14,7 @@ Danny Anderson
 - LinkedIn: https://www.linkedin.com/in/daniel-anderson-52109721/  
 - GitHub: https://github.com/gaandus  
 
-**Resume (PDF):**  [Danny_Anderson_Resume.pdf](./resume/Danny_Anderson_Resume.pdf)**
+Resume (PDF): **[Danny_Anderson_Resume.pdf](./resume/Danny_Anderson_Resume.pdf)**
 
 ---
 
