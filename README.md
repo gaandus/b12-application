@@ -15,7 +15,7 @@ Danny Anderson
 - GitHub: https://github.com/gaandus  
 
 **Resume (PDF):**  
-`./resume/Danny_Anderson_Resume.pdf`
+`.resume/Danny Anderson – Resume.pdf`
 
 ---
 
